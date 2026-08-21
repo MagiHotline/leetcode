@@ -1,11 +1,11 @@
 {
   "max_score": 100,
   "skills": [
-    { "name": "Time and Space", "score": 80 },
-    { "name": "Thinking", "score": 65 },
-    { "name": "Elegance", "score": 45 },
-    { "name": "Wisdom", "score": 60 },
-    { "name": "Algorithms", "score": 55 },
-    { "name": "Speed", "score": 70 }
+    { "name": "Time and Space", "score": 10 },
+    { "name": "Thinking", "score": 20 },
+    { "name": "Elegance", "score": 20 },
+    { "name": "Wisdom", "score": 10 },
+    { "name": "Algorithms", "score": 40 },
+    { "name": "Speed", "score": 15 }
   ]
 }
