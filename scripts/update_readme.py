@@ -4,7 +4,7 @@ update_readme.py
 
 Scans the `solutions/` directory, parses problem metadata from `metadata.json`
 or comment headers in source files, and updates README.md with summary statistics,
-date completed, and an updated Markdown table sorted by date.
+date completed, and an updated Markdown table sorted by date (newest to oldest).
 """
 
 import json
@@ -20,6 +20,20 @@ DIFFICULTY_BADGES = {
     "Easy": "![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square)",
     "Medium": "![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square)",
     "Hard": "![Hard](https://img.shields.io/badge/Difficulty-Hard-red?style=flat-square)"
+}
+
+LANG_LABELS = {
+    ".c": "C",
+    ".cpp": "C++",
+    ".cc": "C++",
+    ".cxx": "C++",
+    ".h": "C/C++",
+    ".py": "Python",
+    ".java": "Java",
+    ".go": "Go",
+    ".rs": "Rust",
+    ".js": "JavaScript",
+    ".ts": "TypeScript"
 }
 
 
@@ -91,7 +105,7 @@ def get_all_solutions():
                 print(f"Warning: Failed to parse {json_file}: {e}")
 
         # Find code files (.c, .cpp, etc.)
-        code_files = [f for f in folder.iterdir() if f.is_file() and f.suffix in [".c", ".cpp", ".h", ".py", ".java", ".go", ".rs", ".js", ".ts"]]
+        code_files = [f for f in folder.iterdir() if f.is_file() and f.suffix in LANG_LABELS]
         
         if not metadata and code_files:
             metadata = parse_metadata_from_code(code_files[0])
@@ -99,22 +113,21 @@ def get_all_solutions():
         if metadata and "id" in metadata:
             rel_folder = folder.relative_to(ROOT_DIR).as_posix()
             
-            # Build links for solutions
+            # Build clickable language buttons/links (e.g. [C], [C++])
             if code_files:
-                if len(code_files) == 1:
-                    sol_link = f"[{code_files[0].name}]({rel_folder}/{code_files[0].name})"
-                else:
-                    links = [f"[{f.name}]({rel_folder}/{f.name})" for f in sorted(code_files)]
-                    sol_link = ", ".join(links)
+                links = []
+                for f in sorted(code_files):
+                    label = LANG_LABELS.get(f.suffix, "Code")
+                    links.append(f"[{label}]({rel_folder}/{f.name})")
+                sol_link = ", ".join(links)
             else:
-                sol_link = f"[Folder]({rel_folder})"
+                sol_link = f"[Solution]({rel_folder})"
 
             # Format problem ID as 4-digit padded string (e.g., 0001)
             problem_id = f"{metadata['id']:04d}"
             title = metadata.get("title", f"Problem {problem_id}")
             url = metadata.get("url", f"https://leetcode.com/problems/{folder.name.split('-', 1)[-1]}/")
             difficulty = metadata.get("difficulty", "Easy")
-            topics = metadata.get("topics", [])
             date_completed = metadata.get("date", "X/X/2024")
 
             solutions.append({
@@ -123,12 +136,11 @@ def get_all_solutions():
                 "title": title,
                 "url": url,
                 "difficulty": difficulty,
-                "topics": topics,
                 "date": date_completed,
                 "solution_link": sol_link
             })
 
-    # Sort primarily by DATE (chronological), secondarily by problem ID
+    # Sort primarily by DATE (newest to oldest), secondarily by problem ID
     solutions.sort(key=lambda s: parse_date_sort_key(s["date"], s["id"]))
     return solutions
 
@@ -154,8 +166,8 @@ def generate_table_markdown(solutions):
         return "_No solutions added yet._\n"
 
     lines = [
-        "| # | Title | Solution | Difficulty | Topics | Date |",
-        "|---|---|---|---|---|---|"
+        "| # | Title | Solution | Difficulty | Date |",
+        "|---|---|---|---|---|"
     ]
 
     for s in solutions:
@@ -163,10 +175,9 @@ def generate_table_markdown(solutions):
         title_link = f"[{s['title']}]({s['url']})"
         sol_link = s["solution_link"]
         diff_badge = DIFFICULTY_BADGES.get(s["difficulty"], f"`{s['difficulty']}`")
-        topics_str = ", ".join([f"`{t}`" for t in s["topics"]]) if s["topics"] else "-"
         date_str = f"`{s['date']}`" if s['date'] else "`X/X/2024`"
 
-        lines.append(f"| {id_str} | {title_link} | {sol_link} | {diff_badge} | {topics_str} | {date_str} |")
+        lines.append(f"| {id_str} | {title_link} | {sol_link} | {diff_badge} | {date_str} |")
 
     return "\n".join(lines) + "\n"
 

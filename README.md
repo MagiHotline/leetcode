@@ -26,17 +26,17 @@ For the solutions of these problems I mostly use _C_ and _C++_.
 ## Problem List
 
 <!-- TABLE:START -->
-| # | Title | Solution | Difficulty | Topics | Date |
-|---|---|---|---|---|---|
-| `0001` | [Two Sum](https://leetcode.com/problems/two-sum/) | [solution.cpp](solutions/0001-two-sum/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `Array`, `Hash Table` | `20/08/2026` |
-| `0121` | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [solution.cpp](solutions/0121-best-time-to-buy-and-sell-stock/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `Array`, `Dynamic Programming` | `20/08/2026` |
-| `0019` | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [solution.c](solutions/0019-remove-nth-node-from-end-of-list/solution.c) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `Linked List`, `Two Pointers` | `X/X/2024` |
-| `0026` | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [solution.c](solutions/0026-remove-duplicates-from-sorted-array/solution.c) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `Array`, `Two Pointers` | `X/X/2024` |
-| `0122` | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | [solution.c](solutions/0122-best-time-to-buy-and-sell-stock-ii/solution.c) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `Array`, `Dynamic Programming`, `Greedy` | `X/X/2024` |
-| `0136` | [Single Number](https://leetcode.com/problems/single-number/) | [solution.c](solutions/0136-single-number/solution.c) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `Array`, `Bit Manipulation` | `X/X/2024` |
-| `0189` | [Rotate Array](https://leetcode.com/problems/rotate-array/) | [solution.c](solutions/0189-rotate-array/solution.c) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `Array`, `Math`, `Two Pointers` | `X/X/2024` |
-| `0217` | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [solution.c](solutions/0217-contains-duplicate/solution.c) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `Array`, `Hash Table`, `Sorting` | `X/X/2024` |
-| `0237` | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) | [solution.c](solutions/0237-delete-node-in-a-linked-list/solution.c) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `Linked List` | `X/X/2024` |
+| # | Title | Solution | Difficulty | Date |
+|---|---|---|---|---|
+| `0001` | [Two Sum](https://leetcode.com/problems/two-sum/) | [C++](solutions/0001-two-sum/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `20/08/2026` |
+| `0121` | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [C++](solutions/0121-best-time-to-buy-and-sell-stock/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `20/08/2026` |
+| `0019` | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [C](solutions/0019-remove-nth-node-from-end-of-list/solution.c) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `X/X/2024` |
+| `0026` | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [C](solutions/0026-remove-duplicates-from-sorted-array/solution.c) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `X/X/2024` |
+| `0122` | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | [C](solutions/0122-best-time-to-buy-and-sell-stock-ii/solution.c) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `X/X/2024` |
+| `0136` | [Single Number](https://leetcode.com/problems/single-number/) | [C](solutions/0136-single-number/solution.c) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `X/X/2024` |
+| `0189` | [Rotate Array](https://leetcode.com/problems/rotate-array/) | [C](solutions/0189-rotate-array/solution.c) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `X/X/2024` |
+| `0217` | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [C](solutions/0217-contains-duplicate/solution.c) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `X/X/2024` |
+| `0237` | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) | [C](solutions/0237-delete-node-in-a-linked-list/solution.c) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `X/X/2024` |
 
 <!-- TABLE:END -->
 
