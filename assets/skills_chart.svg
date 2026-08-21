@@ -13,10 +13,6 @@
   <!-- Container Card -->
   <rect width="560" height="420" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="1.2" />
 
-  <!-- Header Section -->
-  <text x="24" y="38" fill="#f0f6fc" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700">🎯 Problem Solving Skill Radar</text>
-  <text x="24" y="58" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="12">Overall Mastery: <tspan fill="#58a6ff" font-weight="bold">62.5%</tspan> • Scale 0–100</text>
-
   <!-- Grid Polygons -->
   <polygon points="280.0,200.0 301.7,212.5 301.7,237.5 280.0,250.0 258.3,237.5 258.3,212.5" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3" /><polygon points="280.0,175.0 323.3,200.0 323.3,250.0 280.0,275.0 236.7,250.0 236.7,200.0" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3" /><polygon points="280.0,150.0 345.0,187.5 345.0,262.5 280.0,300.0 215.0,262.5 215.0,187.5" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3" /><polygon points="280.0,125.0 366.6,175.0 366.6,275.0 280.0,325.0 193.4,275.0 193.4,175.0" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3" /><polygon points="280.0,100.0 388.3,162.5 388.3,287.5 280.0,350.0 171.7,287.5 171.7,162.5" fill="none" stroke="#484f58" stroke-width="1"  />
 
