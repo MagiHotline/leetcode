@@ -97,17 +97,19 @@ def generate_radar_svg(data: dict) -> str:
         elif sin_a > 0.8:
             ly += 10
 
-        name = s.get("name", f"Skill {i+1}")
+        name = s.get("name", f"Skill {i + 1}")
         score = s.get("score", 0)
 
         labels.append(
             f'<text x="{lx:.1f}" y="{ly:.1f}" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="{anchor}" dominant-baseline="middle">'
             f'{name} <tspan fill="#38bdf8" font-weight="bold">({score})</tspan>'
-            f'</text>'
+            f"</text>"
         )
 
     # Calculate overall average score
-    avg_score = round(sum(s.get("score", 0) for s in skills) / len(skills), 1) if skills else 0
+    avg_score = (
+        round(sum(s.get("score", 0) for s in skills) / len(skills), 1) if skills else 0
+    )
 
     svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}">
   <defs>
@@ -123,10 +125,6 @@ def generate_radar_svg(data: dict) -> str:
 
   <!-- Container Card -->
   <rect width="{width}" height="{height}" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="1.2" />
-
-  <!-- Header Section -->
-  <text x="24" y="38" fill="#f0f6fc" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700">🎯 Problem Solving Skill Radar</text>
-  <text x="24" y="58" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="12">Overall Mastery: <tspan fill="#58a6ff" font-weight="bold">{avg_score}%</tspan> • Scale 0–{max_score}</text>
 
   <!-- Grid Polygons -->
   {"".join(grid_polygons)}
@@ -158,7 +156,9 @@ def main():
     ASSETS_DIR.mkdir(parents=True, exist_ok=True)
     svg_output = generate_radar_svg(data)
     OUTPUT_SVG.write_text(svg_output, encoding="utf-8")
-    print(f"✨ Successfully generated radar chart at: {OUTPUT_SVG.relative_to(ROOT_DIR)}")
+    print(
+        f"✨ Successfully generated radar chart at: {OUTPUT_SVG.relative_to(ROOT_DIR)}"
+    )
 
 
 if __name__ == "__main__":
