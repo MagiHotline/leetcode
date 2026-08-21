@@ -1,0 +1,21 @@
+# Binaries and build artifacts
+*.out
+*.exe
+*.o
+*.obj
+*.app
+build/
+bin/
+.vscode/
+.idea/
+*.dSYM/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/

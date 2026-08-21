@@ -1,0 +1,28 @@
+name: Update README Table
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'solutions/**'
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Update README.md
+        run: python scripts/update_readme.py
+
+      - name: Commit & Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: auto-update README problem table and statistics"
+          file_pattern: "README.md"
