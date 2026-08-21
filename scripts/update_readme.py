@@ -57,10 +57,10 @@ def parse_metadata_from_code(code_file: Path) -> dict:
 def parse_date_sort_key(date_str: str, problem_id: int):
     """
     Parses date strings like '20/08/2026' or 'X/X/2024' (DD/MM/YYYY)
-    into a tuple for chronological sorting: (year, month, day, problem_id).
+    into a tuple for newest-to-oldest sorting: (-year, -month, -day, problem_id).
     """
     if not date_str:
-        return (9999, 99, 99, problem_id)
+        return (0, 0, 0, problem_id)
     
     parts = date_str.split("/")
     if len(parts) == 3:
@@ -68,9 +68,9 @@ def parse_date_sort_key(date_str: str, problem_id: int):
         year = int(y_str) if y_str.isdigit() else 0
         month = int(m_str) if m_str.isdigit() else 0
         day = int(d_str) if d_str.isdigit() else 0
-        return (year, month, day, problem_id)
+        return (-year, -month, -day, problem_id)
     
-    return (9999, 99, 99, problem_id)
+    return (0, 0, 0, problem_id)
 
 
 def get_all_solutions():
