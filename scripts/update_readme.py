@@ -96,7 +96,7 @@ def get_all_solutions():
             url = metadata.get("url", f"https://leetcode.com/problems/{folder.name.split('-', 1)[-1]}/")
             difficulty = metadata.get("difficulty", "Easy")
             topics = metadata.get("topics", [])
-            date_completed = metadata.get("date", "2024/X/X")
+            date_completed = metadata.get("date", "X/X/2024")
 
             solutions.append({
                 "id": metadata['id'],
@@ -144,7 +144,7 @@ def generate_table_markdown(solutions):
         sol_link = s["solution_link"]
         diff_badge = DIFFICULTY_BADGES.get(s["difficulty"], f"`{s['difficulty']}`")
         topics_str = ", ".join([f"`{t}`" for t in s["topics"]]) if s["topics"] else "-"
-        date_str = f"`{s['date']}`" if s['date'] else "`2024/X/X`"
+        date_str = f"`{s['date']}`" if s['date'] else "`X/X/2024`"
 
         lines.append(f"| {id_str} | {title_link} | {sol_link} | {diff_badge} | {topics_str} | {date_str} |")
 

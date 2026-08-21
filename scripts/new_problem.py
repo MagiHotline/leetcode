@@ -128,7 +128,7 @@ def main():
     parser.add_argument("-tp", "--topics", type=str, help="Comma-separated topics (e.g., 'Array, Hash Table')")
     parser.add_argument("-u", "--url", type=str, help="LeetCode Problem URL")
     parser.add_argument("-l", "--lang", type=str, choices=["c", "cpp", "c++"], default="c", help="Language (c or cpp)")
-    parser.add_argument("--date", type=str, default="2024/X/X", help="Completion date (e.g., '2024/X/X')")
+    parser.add_argument("--date", type=str, default="X/X/2024", help="Completion date in Italian format DD/MM/YYYY (e.g., '20/08/2026' or 'X/X/2024')")
 
     args = parser.parse_args()
 
@@ -149,7 +149,7 @@ def main():
             topics_raw = input("Topics (comma separated, e.g. Array, Hash Table): ").strip()
             topics_list = [t.strip() for t in topics_raw.split(",") if t.strip()]
             lang = input("Language [c / cpp] (default: c): ").strip() or "c"
-            date = input("Completion Date (default: 2024/X/X): ").strip() or "2024/X/X"
+            date = input("Completion Date (default: X/X/2024): ").strip() or "X/X/2024"
             url = input(f"URL (Leave blank for default https://leetcode.com/problems/{slugify(title)}/): ").strip() or None
         except KeyboardInterrupt:
             print("\nCancelled.")
