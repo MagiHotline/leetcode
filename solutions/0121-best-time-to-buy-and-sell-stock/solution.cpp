@@ -5,34 +5,25 @@
  * Topics: Array, Dynamic Programming
  */
 
-#include <iostream>
 #include <vector>
-#include <algorithm>
-#include <climits>
 
 using namespace std;
-
 class Solution {
 public:
-    int maxProfit(vector<int>& prices) {
-        int minPrice = INT_MAX;
-        int maxProfit = 0;
-
-        for (int price : prices) {
-            if (price < minPrice) {
-                minPrice = price;
-            } else if (price - minPrice > maxProfit) {
-                maxProfit = price - minPrice;
-            }
-        }
-
-        return maxProfit;
+  int maxProfit(vector<int> &prices) {
+    int minVal = prices[0];
+    // prices[1st] = 30$
+    int profit = 0;
+    // just take the biggest difference that is subsequential
+    for (int price : prices) {
+      if (price < minVal) {
+        minVal = price;
+      } else {
+        profit = std::max(profit, price - minVal);
+      }
     }
-};
 
-int main() {
-    Solution sol;
-    vector<int> prices = {7, 1, 5, 3, 6, 4};
-    cout << "Max Profit: " << sol.maxProfit(prices) << endl; // Expected: 5
-    return 0;
-}
+    // maxProfit -> maxValue(future) - minValue (past)
+    return profit;
+  }
+};

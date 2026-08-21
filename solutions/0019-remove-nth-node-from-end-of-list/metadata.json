@@ -1,0 +1,11 @@
+{
+  "id": 19,
+  "title": "Remove Nth Node From End of List",
+  "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+  "difficulty": "Medium",
+  "topics": [
+    "Linked List",
+    "Two Pointers"
+  ],
+  "date": "2024/X/X"
+}

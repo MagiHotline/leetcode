@@ -1,7 +1,7 @@
 {
   "max_score": 100,
   "skills": [
-    { "name": "Coding", "score": 80 },
+    { "name": "Time and Space", "score": 80 },
     { "name": "Thinking", "score": 65 },
     { "name": "Elegance", "score": 45 },
     { "name": "Wisdom", "score": 60 },

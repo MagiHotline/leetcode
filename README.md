@@ -7,9 +7,9 @@ Welcome. These are gonna be my solutions to the Leetcode problems i'm solving. D
 <!-- STATS:START -->
 ### 📊 Progress Summary
 
-- **Total Solved:** `3`
-- 🟢 **Easy:** `2`
-- 🟡 **Medium:** `1`
+- **Total Solved:** `9`
+- 🟢 **Easy:** `5`
+- 🟡 **Medium:** `4`
 - 🔴 **Hard:** `0`
 
 <!-- STATS:END -->
@@ -25,11 +25,17 @@ Welcome. These are gonna be my solutions to the Leetcode problems i'm solving. D
 ## 📝 Problem List
 
 <!-- TABLE:START -->
-| # | Title | Solution | Difficulty | Topics |
-|---|---|---|---|---|
-| `0001` | [Two Sum](https://leetcode.com/problems/two-sum/) | [solution.cpp](solutions/0001-two-sum/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `Array`, `Hash Table` |
-| `0002` | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | [Folder](solutions/0002-add-two-numbers) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `Linked List`, `Math`, `Recursion` |
-| `0121` | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [solution.cpp](solutions/0121-best-time-to-buy-and-sell-stock/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `Array`, `Dynamic Programming` |
+| # | Title | Solution | Difficulty | Topics | Date |
+|---|---|---|---|---|---|
+| `0001` | [Two Sum](https://leetcode.com/problems/two-sum/) | [solution.cpp](solutions/0001-two-sum/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `Array`, `Hash Table` | `2024/X/X` |
+| `0019` | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [solution.c](solutions/0019-remove-nth-node-from-end-of-list/solution.c) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `Linked List`, `Two Pointers` | `2024/X/X` |
+| `0026` | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [solution.c](solutions/0026-remove-duplicates-from-sorted-array/solution.c) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `Array`, `Two Pointers` | `2024/X/X` |
+| `0121` | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [solution.cpp](solutions/0121-best-time-to-buy-and-sell-stock/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `Array`, `Dynamic Programming` | `2024/X/X` |
+| `0122` | [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | [solution.c](solutions/0122-best-time-to-buy-and-sell-stock-ii/solution.c) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `Array`, `Dynamic Programming`, `Greedy` | `2024/X/X` |
+| `0136` | [Single Number](https://leetcode.com/problems/single-number/) | [solution.c](solutions/0136-single-number/solution.c) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `Array`, `Bit Manipulation` | `2024/X/X` |
+| `0189` | [Rotate Array](https://leetcode.com/problems/rotate-array/) | [solution.c](solutions/0189-rotate-array/solution.c) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `Array`, `Math`, `Two Pointers` | `2024/X/X` |
+| `0217` | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [solution.c](solutions/0217-contains-duplicate/solution.c) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `Array`, `Hash Table`, `Sorting` | `2024/X/X` |
+| `0237` | [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/) | [solution.c](solutions/0237-delete-node-in-a-linked-list/solution.c) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `Linked List` | `2024/X/X` |
 
 <!-- TABLE:END -->
 
@@ -64,7 +70,7 @@ Edit [`skills.json`](skills.json) manually to adjust your points / categories (s
 ```json
 {
   "skills": [
-    { "name": "Coding", "score": 80 },
+    { "name": "Time and Space", "score": 80 },
     { "name": "Thinking", "score": 65 },
     { "name": "Elegance", "score": 45 },
     { "name": "Wisdom", "score": 60 },
@@ -77,7 +83,7 @@ Edit [`skills.json`](skills.json) manually to adjust your points / categories (s
 Then run `python3 scripts/update_readme.py` (or simply git push—the GitHub Action will update it automatically!).
 Categories are described as such:
 
-- Coding: the ability of implementation,
+- Time and Space: the ability of implementation, how well do I handle time and space complexity,
 - Thinking: the ability to assess the problems and edge-cases,
 - Elegance: the ability to write clean and elegant solutions,
 - Wisdom: the ability to approach the problem in a wise way,
