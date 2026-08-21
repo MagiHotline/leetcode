@@ -1,6 +1,7 @@
 # Leetcode Solutions
 
 Welcome. These are gonna be my solutions to the Leetcode problems i'm solving. Don't expect clean or elegant solutions, I'm just trying to _cook_ my interviews.
+For the solutions of these problems I mostly use _C_ and _C++_.
 
 ---
 
