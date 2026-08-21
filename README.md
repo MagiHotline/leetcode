@@ -7,8 +7,8 @@ Welcome. These are gonna be my solutions to the Leetcode problems i'm solving. D
 <!-- STATS:START -->
 ### 📊 Progress Summary
 
-- **Total Solved:** `2`
-- 🟢 **Easy:** `1`
+- **Total Solved:** `3`
+- 🟢 **Easy:** `2`
 - 🟡 **Medium:** `1`
 - 🔴 **Hard:** `0`
 
@@ -29,6 +29,7 @@ Welcome. These are gonna be my solutions to the Leetcode problems i'm solving. D
 |---|---|---|---|---|
 | `0001` | [Two Sum](https://leetcode.com/problems/two-sum/) | [solution.cpp](solutions/0001-two-sum/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `Array`, `Hash Table` |
 | `0002` | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | [Folder](solutions/0002-add-two-numbers) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `Linked List`, `Math`, `Recursion` |
+| `0121` | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [solution.cpp](solutions/0121-best-time-to-buy-and-sell-stock/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `Array`, `Dynamic Programming` |
 
 <!-- TABLE:END -->
 
@@ -56,25 +57,32 @@ To regenerate the `README.md` statistics, problem table, and the SVG radar chart
 python3 scripts/update_readme.py
 ```
 
-### 🎯 Updating Your Skill Points
+### Updating Your Skill Points
 
 Edit [`skills.json`](skills.json) manually to adjust your points / categories (scale 0-100):
 
 ```json
 {
-  "max_score": 100,
   "skills": [
-    { "name": "Arrays & Strings", "score": 80 },
-    { "name": "Trees & Graphs", "score": 65 },
-    { "name": "Dynamic Programming", "score": 45 },
-    { "name": "Math & Bitwise", "score": 60 },
-    { "name": "Greedy & Backtracking", "score": 55 },
-    { "name": "Binary Search & Pointers", "score": 70 }
+    { "name": "Coding", "score": 80 },
+    { "name": "Thinking", "score": 65 },
+    { "name": "Elegance", "score": 45 },
+    { "name": "Wisdom", "score": 60 },
+    { "name": "Algorithms", "score": 55 },
+    { "name": "Speed", "score": 70 }
   ]
 }
 ```
 
 Then run `python3 scripts/update_readme.py` (or simply git push—the GitHub Action will update it automatically!).
+Categories are described as such:
+
+- Coding: the ability of implementation,
+- Thinking: the ability to assess the problems and edge-cases,
+- Elegance: the ability to write clean and elegant solutions,
+- Wisdom: the ability to approach the problem in a wise way,
+- Algorithms: the knowledge of algorithms and data structures useful for the problem,
+- Speed: how fast I am to solve the problem
 
 ---
 

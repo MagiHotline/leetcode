@@ -1,11 +1,11 @@
 {
   "max_score": 100,
   "skills": [
-    { "name": "Arrays & Strings", "score": 80 },
-    { "name": "Trees & Graphs", "score": 65 },
-    { "name": "Dynamic Programming", "score": 45 },
-    { "name": "Math & Bitwise", "score": 60 },
-    { "name": "Greedy & Backtracking", "score": 55 },
-    { "name": "Binary Search & Pointers", "score": 70 }
+    { "name": "Coding", "score": 80 },
+    { "name": "Thinking", "score": 65 },
+    { "name": "Elegance", "score": 45 },
+    { "name": "Wisdom", "score": 60 },
+    { "name": "Algorithms", "score": 55 },
+    { "name": "Speed", "score": 70 }
   ]
 }
