@@ -37,7 +37,7 @@ def create_problem(problem_id: int, title: str, difficulty: str, topics_list: li
     folder_path = SOLUTIONS_DIR / folder_name
 
     if folder_path.exists():
-        print(f"❌ Error: Problem directory already exists at {folder_path.relative_to(ROOT_DIR)}")
+        print(f"Error: Problem directory already exists at {folder_path.relative_to(ROOT_DIR)}")
         sys.exit(1)
 
     folder_path.mkdir(parents=True, exist_ok=True)
@@ -114,7 +114,7 @@ int main() {{
 """
         (folder_path / "solution.c").write_text(code_content, encoding="utf-8")
 
-    print(f"✨ Created problem scaffolding at: {folder_path.relative_to(ROOT_DIR)}")
+    print(f"Created problem scaffolding at: {folder_path.relative_to(ROOT_DIR)}")
     
     # Automatically update README
     update_readme()

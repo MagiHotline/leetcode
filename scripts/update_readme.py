@@ -4,7 +4,7 @@ update_readme.py
 
 Scans the `solutions/` directory, parses problem metadata from `metadata.json`
 or comment headers in source files, and updates README.md with summary statistics,
-date completed, and an updated Markdown table.
+date completed, and an updated Markdown table sorted by date.
 """
 
 import json
@@ -52,6 +52,25 @@ def parse_metadata_from_code(code_file: Path) -> dict:
         meta["date"] = date_match.group(1).strip()
 
     return meta
+
+
+def parse_date_sort_key(date_str: str, problem_id: int):
+    """
+    Parses date strings like '20/08/2026' or 'X/X/2024' (DD/MM/YYYY)
+    into a tuple for chronological sorting: (year, month, day, problem_id).
+    """
+    if not date_str:
+        return (9999, 99, 99, problem_id)
+    
+    parts = date_str.split("/")
+    if len(parts) == 3:
+        d_str, m_str, y_str = parts
+        year = int(y_str) if y_str.isdigit() else 0
+        month = int(m_str) if m_str.isdigit() else 0
+        day = int(d_str) if d_str.isdigit() else 0
+        return (year, month, day, problem_id)
+    
+    return (9999, 99, 99, problem_id)
 
 
 def get_all_solutions():
@@ -109,7 +128,8 @@ def get_all_solutions():
                 "solution_link": sol_link
             })
 
-    solutions.sort(key=lambda x: x["id"])
+    # Sort primarily by DATE (chronological), secondarily by problem ID
+    solutions.sort(key=lambda s: parse_date_sort_key(s["date"], s["id"]))
     return solutions
 
 
@@ -120,11 +140,11 @@ def generate_stats_markdown(solutions):
     hard = sum(1 for s in solutions if s["difficulty"] == "Hard")
 
     stats = (
-        f"### 📊 Progress Summary\n\n"
+        f"### Progress Summary\n\n"
         f"- **Total Solved:** `{total}`\n"
-        f"- 🟢 **Easy:** `{easy}`\n"
-        f"- 🟡 **Medium:** `{medium}`\n"
-        f"- 🔴 **Hard:** `{hard}`\n"
+        f"- **Easy:** `{easy}`\n"
+        f"- **Medium:** `{medium}`\n"
+        f"- **Hard:** `{hard}`\n"
     )
     return stats
 
@@ -183,12 +203,12 @@ def update_readme():
         )
 
     README_PATH.write_text(content, encoding="utf-8")
-    print(f"✅ README.md successfully updated with {len(solutions)} problem(s).")
+    print(f"README.md successfully updated with {len(solutions)} problem(s) sorted by date.")
     
     try:
         generate_chart_main()
     except Exception as e:
-        print(f"⚠️ Warning: Could not regenerate chart: {e}")
+        print(f"Warning: Could not regenerate chart: {e}")
 
 
 if __name__ == "__main__":
