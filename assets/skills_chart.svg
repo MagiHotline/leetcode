@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="560" height="420">
+  <defs>
+    <linearGradient id="polyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Container Card -->
+  <rect width="560" height="420" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="1.2" />
+
+  <!-- Header Section -->
+  <text x="24" y="38" fill="#f0f6fc" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700">🎯 Problem Solving Skill Radar</text>
+  <text x="24" y="58" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="12">Overall Mastery: <tspan fill="#58a6ff" font-weight="bold">62.5%</tspan> • Scale 0–100</text>
+
+  <!-- Grid Polygons -->
+  <polygon points="280.0,200.0 301.7,212.5 301.7,237.5 280.0,250.0 258.3,237.5 258.3,212.5" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3" /><polygon points="280.0,175.0 323.3,200.0 323.3,250.0 280.0,275.0 236.7,250.0 236.7,200.0" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3" /><polygon points="280.0,150.0 345.0,187.5 345.0,262.5 280.0,300.0 215.0,262.5 215.0,187.5" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3" /><polygon points="280.0,125.0 366.6,175.0 366.6,275.0 280.0,325.0 193.4,275.0 193.4,175.0" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3" /><polygon points="280.0,100.0 388.3,162.5 388.3,287.5 280.0,350.0 171.7,287.5 171.7,162.5" fill="none" stroke="#484f58" stroke-width="1"  />
+
+  <!-- Axis Lines -->
+  <line x1="280.0" y1="225.0" x2="280.0" y2="100.0" stroke="#30363d" stroke-width="1" /><line x1="280.0" y1="225.0" x2="388.3" y2="162.5" stroke="#30363d" stroke-width="1" /><line x1="280.0" y1="225.0" x2="388.3" y2="287.5" stroke="#30363d" stroke-width="1" /><line x1="280.0" y1="225.0" x2="280.0" y2="350.0" stroke="#30363d" stroke-width="1" /><line x1="280.0" y1="225.0" x2="171.7" y2="287.5" stroke="#30363d" stroke-width="1" /><line x1="280.0" y1="225.0" x2="171.7" y2="162.5" stroke="#30363d" stroke-width="1" />
+
+  <!-- Data Radar Polygon -->
+  <polygon points="280.0,125.0 350.4,184.4 328.7,253.1 280.0,300.0 220.5,259.4 204.2,181.2" fill="url(#polyGrad)" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round" />
+
+  <!-- Data Point Markers -->
+  <circle cx="280.0" cy="125.0" r="4.5" fill="#38bdf8" stroke="#0d1117" stroke-width="2" /><circle cx="350.4" cy="184.4" r="4.5" fill="#38bdf8" stroke="#0d1117" stroke-width="2" /><circle cx="328.7" cy="253.1" r="4.5" fill="#38bdf8" stroke="#0d1117" stroke-width="2" /><circle cx="280.0" cy="300.0" r="4.5" fill="#38bdf8" stroke="#0d1117" stroke-width="2" /><circle cx="220.5" cy="259.4" r="4.5" fill="#38bdf8" stroke="#0d1117" stroke-width="2" /><circle cx="204.2" cy="181.2" r="4.5" fill="#38bdf8" stroke="#0d1117" stroke-width="2" />
+
+  <!-- Labels -->
+  <text x="280.0" y="67.0" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" dominant-baseline="middle">Arrays & Strings <tspan fill="#38bdf8" font-weight="bold">(80)</tspan></text><text x="412.5" y="148.5" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="start" dominant-baseline="middle">Trees & Graphs <tspan fill="#38bdf8" font-weight="bold">(65)</tspan></text><text x="412.5" y="301.5" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="start" dominant-baseline="middle">Dynamic Programming <tspan fill="#38bdf8" font-weight="bold">(45)</tspan></text><text x="280.0" y="388.0" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle" dominant-baseline="middle">Math & Bitwise <tspan fill="#38bdf8" font-weight="bold">(60)</tspan></text><text x="147.5" y="301.5" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="end" dominant-baseline="middle">Greedy & Backtracking <tspan fill="#38bdf8" font-weight="bold">(55)</tspan></text><text x="147.5" y="148.5" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="end" dominant-baseline="middle">Binary Search & Pointers <tspan fill="#38bdf8" font-weight="bold">(70)</tspan></text>
+</svg>

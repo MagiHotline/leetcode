@@ -10,6 +10,7 @@ and an updated Markdown table.
 import json
 import re
 from pathlib import Path
+from generate_chart import main as generate_chart_main
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 SOLUTIONS_DIR = ROOT_DIR / "solutions"
@@ -173,6 +174,11 @@ def update_readme():
 
     README_PATH.write_text(content, encoding="utf-8")
     print(f"✅ README.md successfully updated with {len(solutions)} problem(s).")
+    
+    try:
+        generate_chart_main()
+    except Exception as e:
+        print(f"⚠️ Warning: Could not regenerate chart: {e}")
 
 
 if __name__ == "__main__":
