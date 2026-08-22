@@ -8,8 +8,8 @@ For the solutions of these problems I mostly use _C_ and _C++_.
 <!-- STATS:START -->
 ### Progress Summary
 
-- **Total Solved:** `10`
-- **Easy:** `6`
+- **Total Solved:** `11`
+- **Easy:** `7`
 - **Medium:** `4`
 - **Hard:** `0`
 
@@ -29,6 +29,7 @@ For the solutions of these problems I mostly use _C_ and _C++_.
 | # | Title | Solution | Difficulty | Date |
 |---|---|---|---|---|
 | `0020` | [Valid Paranthesis](https://leetcode.com/problems/valid-parentheses/) | [C++](solutions/0020-valid-paranthesis/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `22/08/2026` |
+| `0060` | [Plus One](https://leetcode.com/problems/plus-one/) | [C++](solutions/0060-plus-one/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `22/08/2026` |
 | `0001` | [Two Sum](https://leetcode.com/problems/two-sum/) | [C++](solutions/0001-two-sum/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `20/08/2026` |
 | `0121` | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [C++](solutions/0121-best-time-to-buy-and-sell-stock/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `20/08/2026` |
 | `0019` | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [C](solutions/0019-remove-nth-node-from-end-of-list/solution.c) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `X/X/2024` |
