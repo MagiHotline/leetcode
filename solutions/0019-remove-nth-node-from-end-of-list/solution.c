@@ -2,8 +2,7 @@
  * Problem: 19. Remove Nth Node From End of List
  * URL: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
  * Difficulty: Medium
- * Topics: Linked List, Two Pointers
- * Date: 2024/X/X
+ * Date: X/X/2024
  */
 
 #include <stdio.h>

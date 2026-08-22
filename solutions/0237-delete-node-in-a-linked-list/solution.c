@@ -2,8 +2,7 @@
  * Problem: 237. Delete Node in a Linked List
  * URL: https://leetcode.com/problems/delete-node-in-a-linked-list/
  * Difficulty: Medium
- * Topics: Linked List
- * Date: 2024/X/X
+ * Date: X/X/2024
  */
 
 #include <stdio.h>

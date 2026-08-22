@@ -6,7 +6,7 @@ Helper CLI script to create a new LeetCode problem folder structure with starter
 metadata.json, and automatically triggers update_readme.py.
 
 Usage:
-    python3 scripts/new_problem.py --id 1 --title "Two Sum" --difficulty Easy --topics "Array, Hash Table" --lang c --date "2024/X/X"
+    python3 scripts/new_problem.py --id 1 --title "Two Sum" --difficulty Easy --lang c --date "X/X/2024"
     OR
     python3 scripts/new_problem.py (Interactive mode)
 """
@@ -30,7 +30,7 @@ def slugify(title: str) -> str:
     return slug
 
 
-def create_problem(problem_id: int, title: str, difficulty: str, topics_list: list, url: str = None, lang: str = "c", date: str = "2024/X/X"):
+def create_problem(problem_id: int, title: str, difficulty: str, url: str = None, lang: str = "c", date: str = "X/X/2024"):
     slug = slugify(title)
     id_padded = f"{problem_id:04d}"
     folder_name = f"{id_padded}-{slug}"
@@ -55,20 +55,17 @@ def create_problem(problem_id: int, title: str, difficulty: str, topics_list: li
         "title": title,
         "url": url,
         "difficulty": difficulty,
-        "topics": topics_list,
         "date": date
     }
     with open(folder_path / "metadata.json", "w", encoding="utf-8") as f:
         json.dump(metadata, f, indent=2)
-
-    topics_str = ", ".join(topics_list)
+        f.write("\n")
 
     if lang.lower() == "cpp" or lang.lower() == "c++":
         code_content = f"""/*
  * Problem: {problem_id}. {title}
  * URL: {url}
  * Difficulty: {difficulty}
- * Topics: {topics_str}
  * Date: {date}
  */
 
@@ -97,7 +94,6 @@ int main() {{
  * Problem: {problem_id}. {title}
  * URL: {url}
  * Difficulty: {difficulty}
- * Topics: {topics_str}
  * Date: {date}
  */
 
@@ -125,7 +121,6 @@ def main():
     parser.add_argument("-i", "--id", type=int, help="LeetCode Problem ID (e.g., 1)")
     parser.add_argument("-t", "--title", type=str, help="Problem Title (e.g., 'Two Sum')")
     parser.add_argument("-d", "--difficulty", type=str, choices=["Easy", "Medium", "Hard", "easy", "medium", "hard"], help="Difficulty level")
-    parser.add_argument("-tp", "--topics", type=str, help="Comma-separated topics (e.g., 'Array, Hash Table')")
     parser.add_argument("-u", "--url", type=str, help="LeetCode Problem URL")
     parser.add_argument("-l", "--lang", type=str, choices=["c", "cpp", "c++"], default="c", help="Language (c or cpp)")
     parser.add_argument("--date", type=str, default="X/X/2024", help="Completion date in Italian format DD/MM/YYYY (e.g., '20/08/2026' or 'X/X/2024')")
@@ -136,7 +131,6 @@ def main():
         problem_id = args.id
         title = args.title
         difficulty = args.difficulty or "Easy"
-        topics_list = [t.strip() for t in args.topics.split(",")] if args.topics else []
         url = args.url
         lang = args.lang
         date = args.date
@@ -146,8 +140,6 @@ def main():
             problem_id = int(input("Problem ID (e.g., 1): ").strip())
             title = input("Problem Title (e.g., Two Sum): ").strip()
             difficulty = input("Difficulty [Easy/Medium/Hard] (default: Easy): ").strip() or "Easy"
-            topics_raw = input("Topics (comma separated, e.g. Array, Hash Table): ").strip()
-            topics_list = [t.strip() for t in topics_raw.split(",") if t.strip()]
             lang = input("Language [c / cpp] (default: c): ").strip() or "c"
             date = input("Completion Date (default: X/X/2024): ").strip() or "X/X/2024"
             url = input(f"URL (Leave blank for default https://leetcode.com/problems/{slugify(title)}/): ").strip() or None
@@ -155,7 +147,7 @@ def main():
             print("\nCancelled.")
             sys.exit(0)
 
-    create_problem(problem_id, title, difficulty, topics_list, url, lang, date)
+    create_problem(problem_id, title, difficulty, url, lang, date)
 
 
 if __name__ == "__main__":

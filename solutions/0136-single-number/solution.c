@@ -2,8 +2,7 @@
  * Problem: 136. Single Number
  * URL: https://leetcode.com/problems/single-number/
  * Difficulty: Easy
- * Topics: Array, Bit Manipulation
- * Date: 2024/X/X
+ * Date: X/X/2024
  */
 
 #include <stdio.h>

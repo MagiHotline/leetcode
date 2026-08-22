@@ -2,8 +2,7 @@
  * Problem: 217. Contains Duplicate
  * URL: https://leetcode.com/problems/contains-duplicate/
  * Difficulty: Easy
- * Topics: Array, Hash Table, Sorting
- * Date: 2024/X/X
+ * Date: X/X/2024
  */
 
 #include <stdio.h>

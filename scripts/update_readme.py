@@ -49,7 +49,6 @@ def parse_metadata_from_code(code_file: Path) -> dict:
     id_match = re.search(r"Problem:\s*(\d+)\.\s*(.*)", content)
     url_match = re.search(r"URL:\s*(https?://[^\s]+)", content)
     diff_match = re.search(r"Difficulty:\s*(Easy|Medium|Hard)", content, re.IGNORECASE)
-    topics_match = re.search(r"Topics:\s*(.*)", content)
     date_match = re.search(r"Date:\s*(.*)", content)
 
     if id_match:
@@ -59,9 +58,6 @@ def parse_metadata_from_code(code_file: Path) -> dict:
         meta["url"] = url_match.group(1).strip()
     if diff_match:
         meta["difficulty"] = diff_match.group(1).capitalize()
-    if topics_match:
-        topics_str = topics_match.group(1).strip()
-        meta["topics"] = [t.strip() for t in topics_str.split(",") if t.strip()]
     if date_match:
         meta["date"] = date_match.group(1).strip()
 

@@ -2,8 +2,7 @@
  * Problem: 189. Rotate Array
  * URL: https://leetcode.com/problems/rotate-array/
  * Difficulty: Medium
- * Topics: Array, Math, Two Pointers
- * Date: 2024/X/X
+ * Date: X/X/2024
  */
 
 #include <stdio.h>

@@ -3,10 +3,5 @@
   "title": "Contains Duplicate",
   "url": "https://leetcode.com/problems/contains-duplicate/",
   "difficulty": "Easy",
-  "topics": [
-    "Array",
-    "Hash Table",
-    "Sorting"
-  ],
   "date": "X/X/2024"
 }

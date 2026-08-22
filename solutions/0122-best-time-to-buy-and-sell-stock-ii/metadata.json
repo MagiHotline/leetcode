@@ -3,10 +3,5 @@
   "title": "Best Time to Buy and Sell Stock II",
   "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
   "difficulty": "Medium",
-  "topics": [
-    "Array",
-    "Dynamic Programming",
-    "Greedy"
-  ],
   "date": "X/X/2024"
 }

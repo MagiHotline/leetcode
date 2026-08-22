@@ -3,10 +3,5 @@
   "title": "Rotate Array",
   "url": "https://leetcode.com/problems/rotate-array/",
   "difficulty": "Medium",
-  "topics": [
-    "Array",
-    "Math",
-    "Two Pointers"
-  ],
   "date": "X/X/2024"
 }

@@ -2,8 +2,7 @@
  * Problem: 122. Best Time to Buy and Sell Stock II
  * URL: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
  * Difficulty: Medium
- * Topics: Array, Dynamic Programming, Greedy
- * Date: 2024/X/X
+ * Date: X/X/2024
  */
 
 #include <stdio.h>

@@ -2,8 +2,7 @@
  * Problem: 26. Remove Duplicates from Sorted Array
  * URL: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
  * Difficulty: Easy
- * Topics: Array, Two Pointers
- * Date: 2024/X/X
+ * Date: X/X/2024
  */
 
 #include <stdio.h>
