@@ -8,9 +8,9 @@ For the solutions of these problems I mostly use _C_ and _C++_.
 <!-- STATS:START -->
 ### Progress Summary
 
-- **Total Solved:** `11`
+- **Total Solved:** `12`
 - **Easy:** `7`
-- **Medium:** `4`
+- **Medium:** `5`
 - **Hard:** `0`
 
 <!-- STATS:END -->
@@ -28,6 +28,7 @@ For the solutions of these problems I mostly use _C_ and _C++_.
 <!-- TABLE:START -->
 | # | Title | Solution | Difficulty | Date |
 |---|---|---|---|---|
+| `0007` | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [C++](solutions/0007-reverse-integer/solution.cpp) | ![Medium](https://img.shields.io/badge/Difficulty-Medium-orange?style=flat-square) | `23/08/2026` |
 | `0020` | [Valid Paranthesis](https://leetcode.com/problems/valid-parentheses/) | [C++](solutions/0020-valid-paranthesis/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `22/08/2026` |
 | `0060` | [Plus One](https://leetcode.com/problems/plus-one/) | [C++](solutions/0060-plus-one/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `22/08/2026` |
 | `0001` | [Two Sum](https://leetcode.com/problems/two-sum/) | [C++](solutions/0001-two-sum/solution.cpp) | ![Easy](https://img.shields.io/badge/Difficulty-Easy-brightgreen?style=flat-square) | `20/08/2026` |
